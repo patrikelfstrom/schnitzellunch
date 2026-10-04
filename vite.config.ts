@@ -1,11 +1,19 @@
 import { defineConfig } from "vite";
-import solidPlugin from "vite-plugin-solid";
-
+import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import { paraglideVitePlugin } from "@inlang/paraglide-js";
+import { nitro } from "nitro/vite";
 export default defineConfig({
-  plugins: [solidPlugin()],
-  build: {
-    target: "esnext",
-    polyfillDynamicImport: false,
-  },
-  publicDir: "src/public",
+  plugins: [
+    paraglideVitePlugin({
+      project: "./project.inlang",
+      outdir: "./src/paraglide",
+      strategy: ["cookie", "baseLocale"],
+    }),
+    tailwindcss(),
+    tanstackStart(),
+    nitro(),
+    react(),
+  ],
 });

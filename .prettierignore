@@ -1,0 +1,9 @@
+node_modules
+.pnpm-store
+.output
+.tanstack
+.nitro
+src/paraglide
+src/routeTree.gen.ts
+pscale_dump_schnitzellunch_main_20240308_002233
+prisma/migrations

@@ -10,3 +10,14 @@ schnitzellunch-old2
 prisma/dev.db
 
 prisma/dev.db-journal
+
+.pnpm-store/
+.output/
+.tanstack/
+.nitro/
+src/paraglide/
+project.inlang/cache/
+project.inlang/*.db
+.env.*
+!.env.example
+dev.db*

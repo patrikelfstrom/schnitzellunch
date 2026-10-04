@@ -1,0 +1,10 @@
+{
+  "ignorePatterns": [
+    "src/paraglide/**",
+    "src/routeTree.gen.ts",
+    ".output/**",
+    ".tanstack/**",
+    ".pnpm-store/**",
+    "dist/**"
+  ]
+}
